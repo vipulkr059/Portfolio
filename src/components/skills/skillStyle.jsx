@@ -45,8 +45,19 @@ export const Left = styled.div`
       font-size: 4rem;
       padding-top: 1rem;
     }
+
     div {
       font-size: 1.2rem;
+      padding: 0.5rem;
+    }
+  }
+  @media (max-width: 480px) {
+    .heading {
+      font-size: 3.5rem;
+      padding-top: 0.5rem;
+    }
+    div {
+      font-size: 1rem;
       padding: 0.5rem;
     }
   }

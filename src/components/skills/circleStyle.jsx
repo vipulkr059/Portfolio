@@ -16,8 +16,16 @@ export const Cir = styled.div`
       color: white;
     }
     @media (max-width: 800px) {
+      width: 80%;
       .heading {
         font-size: 1.2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      width: 90%;
+      .heading {
+        font-size: 1rem;
       }
     }
   }

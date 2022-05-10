@@ -6,8 +6,9 @@ export const IntroContainer = styled.div`
   flex-direction: column;
   .name {
     position: absolute;
-    padding-left: 12rem;
-    padding-top: 9rem;
+    /* padding-left: 12rem;
+    padding-top: 9rem; */
+
     .text {
       font-weight: 400;
       font-size: 6rem;
@@ -33,26 +34,27 @@ export const IntroContainer = styled.div`
       }
     }
     @media (max-width: 800px) {
-      top: 45%;
-      padding-left: 4rem;
+      /* top: 45%;
+      padding-left: 4rem; */
     }
   }
   .imgcon {
     position: absolute;
-    width: auto;
-    padding-left: 50%;
+    /* width: auto; */
+    /* padding-left: 50%; */
     img {
       width: 50%;
-      padding: 5rem 0rem 0rem 12rem;
+      /* padding: 5rem 0rem 0rem 12rem; */
+      /* margin: 6rem 0rem 0rem 13rem; */
     }
     @media (max-width: 800px) {
-      display: flex;
+      /* display: flex;
       flex-direction: column;
       padding-left: 0%;
-      width: 100%;
+      width: 100%; */
 
       img {
-        padding: 9rem 6rem 3rem 7rem;
+        /* padding: 9rem 6rem 3rem 7rem; */
       }
     }
   }
@@ -71,29 +73,33 @@ export const IntroContainer = styled.div`
       transition: opacity 0.6s linear;
     }
   }
+  @media (max-width: 480px) {
+    .name {
+      /* margin: 3rem 0 0 3rem; */
+    }
+  }
 `;
 
 export const Left = styled.div`
   display: flex;
   flex: 1;
-  align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+  .imgcon {
+    z-index: 2;
+    bottom: 10rem;
+    img {
+      width: 60%;
+    }
+  }
 
-  .text {
-    font-weight: 400;
-    font-size: 6rem;
-    line-height: 7rem;
-    color: white;
-
-    .small {
-      font-size: 1.5rem;
-      text-shadow: none;
-      line-height: 2;
-      span {
-        font-size: inherit;
-        color: #f76301;
-        text-shadow: 0 0 2px black;
-      }
+  @media (max-width: 800px) {
+    justify-content: center;
+    align-items: flex-end;
+    .imgcon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      bottom: auto;
     }
   }
 `;
@@ -103,4 +109,17 @@ export const Right = styled.div`
   flex: 1;
   background-color: #a276ff;
   border-radius: 25px 25px 0px 0px;
+  .name {
+    z-index: 2;
+    bottom: 10rem;
+    left: 10rem;
+  }
+  @media (max-width: 800px) {
+    justify-content: center;
+    align-items: center;
+    .name {
+      bottom: auto;
+      left: auto;
+    }
+  }
 `;

@@ -38,7 +38,7 @@ const About = () => {
           data-aos-duration="2000"
           data-aos-offset="10"
         >
-          ABOUT <span className="high"> ME</span>
+          ABOUT&nbsp;<span className="high"> ME</span>
         </span>
       </Container>
       <Container2

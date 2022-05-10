@@ -6,20 +6,19 @@ export const Menu = styled.div`
     display: block;
   }
   .topbar {
-    width: 75px;
-    height: 60px;
-    right: 10px;
-    top: 10px;
+    width: 55px;
+    height: 55px;
+    right: 2rem;
+    top: 15px;
     border-radius: 25%;
     background-color: #f76301;
     color: $mainColor;
     position: fixed;
-    top: 0;
-    z-index: 3;
+    z-index: 4;
     transition: all 1s ease;
 
     .wrapper {
-      padding: 15px 20px;
+      padding: 16px 13px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -78,7 +77,7 @@ export const Menu = styled.div`
     }
 
     &.active {
-      background-color: black;
+      background-color: #1b1c35;
       color: white;
 
       .hamburger {
@@ -105,7 +104,7 @@ export const Menu = styled.div`
     position: fixed;
     top: 0;
     right: -300px;
-    z-index: 2;
+    z-index: 3;
     display: flex;
     flex-direction: column;
     align-items: center;

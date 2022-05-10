@@ -23,10 +23,37 @@ export default function Intro() {
 
   return (
     <IntroContainer id="intro">
-      <Left></Left>
-      <Right></Right>
+      <Left>
+        <div
+          className="imgcon"
+          data-aos="fade-up"
+          data-aos-anchor-placement="top-center"
+          data-aos-duration="1000"
+        >
+          <img src={Pr} alt="" />
+        </div>
+      </Left>
+      <Right>
+        <div className="name">
+          <div
+            className="text"
+            data-aos="fade-right"
+            data-aos-easing="ease-in-sine"
+            data-aos-duration="1500"
+          >
+            <div>HI,</div>
+            <div>
+              I'M <span className="high">VIPUL</span>,
+            </div>
+            <div>WEB DEVELOPER</div>
+            <div className="small">
+              <span className="sma">FrontEnd / Full Stack Developer</span>
+            </div>
+          </div>
+        </div>
+      </Right>
 
-      <div className="name">
+      {/*<div className="name">
         <div
           className="text"
           data-aos="fade-right"
@@ -45,7 +72,7 @@ export default function Intro() {
       </div>
       <div
         className="imgcon"
-        data-aos="zoom-out"
+        data-aos="fade-up"
         data-aos-anchor-placement="top-center"
         data-aos-duration="1000"
       >

@@ -80,6 +80,11 @@ export const Container = styled.div`
           gap: 0;
         }
       }
+      @media (max-width: 480px) {
+        .cardbody {
+          height: 55%;
+        }
+      }
     }
   }
 `;

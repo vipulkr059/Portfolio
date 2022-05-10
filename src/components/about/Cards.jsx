@@ -5,7 +5,7 @@ export default function Cards({ ed }) {
   const { univ, college, image, time, branch } = ed;
   return (
     <Container>
-      <div className="edu" data-aos="flip-left" data-aos-duration="1500">
+      <div className="edu" data-aos="fade-up" data-aos-duration="1500">
         <div className="card1">
           <div className="cardbody">
             <div className="imgCon">

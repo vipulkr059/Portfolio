@@ -47,6 +47,17 @@ export const Left = styled.div`
         padding: 0.5rem;
       }
     }
+    @media (max-width: 480px) {
+      .laptop {
+        height: 85%;
+        width: 55%;
+      }
+      .spiffy {
+        height: 14%;
+        width: 40%;
+        padding: 0.5rem;
+      }
+    }
   }
   .text {
     display: flex;
@@ -116,9 +127,30 @@ export const Left = styled.div`
       }
       .heading {
         font-size: 1.5rem;
-
         padding: 0.3rem;
       }
+    }
+    @media (max-width: 480px) {
+      .heading {
+        font-size: 1.2rem;
+        padding: 0.3rem;
+      }
+      .description {
+        font-size: 1rem;
+      }
+      .buttons {
+        gap: 3rem;
+
+        button {
+          width: 7rem;
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+  .lower {
+    @media (max-width: 800px) {
+      flex-direction: column-reverse;
     }
   }
 `;

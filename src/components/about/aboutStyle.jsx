@@ -83,10 +83,7 @@ export const Rect = styled.div`
 export const Container = styled.div`
   display: flex;
   flex: 1;
-  @media (max-width: 800px) {
-    flex-direction: column-reverse;
-    width: 100vw;
-  }
+
   div {
     display: flex;
     flex: 1;
@@ -96,13 +93,6 @@ export const Container = styled.div`
     padding-left: 7rem;
     padding-right: 5rem;
     font-size: 1.5rem;
-    @media (max-width: 800px) {
-      font-size: 1.2rem;
-      padding-left: 2rem;
-      padding-right: 1rem;
-      align-items: center;
-      flex: 0.7;
-    }
   }
   .heading {
     display: flex;
@@ -111,12 +101,33 @@ export const Container = styled.div`
     justify-content: center;
     font-size: 5rem;
 
-    @media (max-width: 800px) {
-      font-size: 4rem;
-      flex: 0.3;
-    }
     .high {
       color: #f76301;
+    }
+  }
+  @media (max-width: 480px) {
+    div {
+      font-size: 1rem;
+      align-items: flex-start;
+    }
+    .heading {
+      font-size: 3.5rem;
+    }
+  }
+
+  @media (max-width: 800px) {
+    flex-direction: column-reverse;
+    width: 100vw;
+    div {
+      font-size: 1.2rem;
+      padding-left: 2rem;
+      padding-right: 1rem;
+      align-items: center;
+      flex: 0.7;
+    }
+    .heading {
+      font-size: 4rem;
+      flex: 0.3;
     }
   }
 `;
@@ -141,6 +152,12 @@ export const Container2 = styled.div`
 
     .high {
       color: #f76301;
+    }
+  }
+  @media (max-width: 480px) {
+    .heading {
+      font-size: 3.5rem;
+      padding: 0.5rem;
     }
   }
 `;
