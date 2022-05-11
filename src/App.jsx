@@ -44,6 +44,7 @@ function App() {
       " UI Designed with React and Style Components.",
       "used in famous E-Commerce. Served Live on Heroku.",
     ],
+    url: "",
   };
   const project2 = {
     name: "Mask On",
@@ -54,6 +55,7 @@ function App() {
       "Soothing Music and GAmeplay Experience.",
       "Addictive For KIds.",
     ],
+    url: "",
   };
   const project3 = {
     name: "Euphony",
@@ -64,6 +66,7 @@ function App() {
       "It has all functionality like Player, Searching etc.",
       "UI is Designed with Styled Components & React",
     ],
+    url: "",
   };
   const project4 = {
     name: "Online Voting System",
@@ -74,6 +77,7 @@ function App() {
       "UI Designed with HTML ,CSS And JavaScript.",
       "Database Managed and Maintain With SQL",
     ],
+    url: "",
   };
   const [menuOpen, setMenuOpen] = useState(false);
   return (

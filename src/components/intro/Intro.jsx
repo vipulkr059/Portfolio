@@ -24,12 +24,7 @@ export default function Intro() {
   return (
     <IntroContainer id="intro">
       <Left>
-        <div
-          className="imgcon"
-          data-aos="fade-up"
-          data-aos-anchor-placement="top-center"
-          data-aos-duration="1000"
-        >
+        <div className="imgcon" data-aos="fade-down" data-aos-duration="1000">
           <img src={Pr} alt="" />
         </div>
       </Left>

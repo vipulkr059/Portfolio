@@ -45,8 +45,12 @@ const Projects = ({ project1, project2 }) => {
             ))}
           </div>
           <div className="buttons">
-            <button>View Live</button>
-            <button>View Code</button>
+            <a href="">
+              <button>View Live</button>
+            </a>
+            <a href="">
+              <button>View Code</button>
+            </a>
           </div>
         </div>
       </Left>
@@ -72,8 +76,12 @@ const Projects = ({ project1, project2 }) => {
             ))}
           </div>
           <div className="buttons">
-            <button>View Live</button>
-            <button>View Code</button>
+            <a href="">
+              <button>View Live</button>
+            </a>
+            <a href="">
+              <button>View Code</button>
+            </a>
           </div>
         </div>
         <div className="imgContainer">
