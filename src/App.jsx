@@ -44,7 +44,8 @@ function App() {
       " UI Designed with React and Style Components.",
       "used in famous E-Commerce. Served Live on Heroku.",
     ],
-    url: "",
+    liveUrl: "https://spiffy-shirts-h.herokuapp.com/",
+    codeUrl: "https://github.com/vipulkr059/Spiffy-Shirts-Local-Version",
   };
   const project2 = {
     name: "Mask On",
@@ -55,7 +56,8 @@ function App() {
       "Soothing Music and GAmeplay Experience.",
       "Addictive For KIds.",
     ],
-    url: "",
+    liveUrl: "https://mask-on.netlify.app/",
+    codeUrl: "https://github.com/vipulkr059/Mask-On-Game-",
   };
   const project3 = {
     name: "Euphony",
@@ -66,7 +68,8 @@ function App() {
       "It has all functionality like Player, Searching etc.",
       "UI is Designed with Styled Components & React",
     ],
-    url: "",
+    liveUrl: "https://github.com/vipulkr059/Euphony",
+    codeUrl: "https://github.com/vipulkr059/Euphony",
   };
   const project4 = {
     name: "Online Voting System",
@@ -77,7 +80,8 @@ function App() {
       "UI Designed with HTML ,CSS And JavaScript.",
       "Database Managed and Maintain With SQL",
     ],
-    url: "",
+    liveUrl: "https://github.com/vipulkr059/Online-Voting-System",
+    codeUrl: "https://github.com/vipulkr059/Online-Voting-System",
   };
   const [menuOpen, setMenuOpen] = useState(false);
   return (
@@ -97,17 +101,6 @@ function App() {
         <Projects project1={project1} project2={project2} />
         <Projects project1={project3} project2={project4} />
         <Contact />
-        {/*<Routes>
-          <Route exact path="/" element={<Intro />} />
-          <Route exact path="/about" element={<About />} />
-          <Route exact path="/skill" element={<Skills />} />
-          <Route
-            exact
-            path="/project"
-            element={<Projects project1={project1} project2={project2} />}
-          />
-          <Route exact path="/contact" element={<Contact />} />
-</Routes>*/}
       </div>
     </Main>
   );

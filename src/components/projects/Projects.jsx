@@ -1,14 +1,14 @@
 import React from "react";
-import { Main, Left, Right } from "./projectStyle";
+import { Main, Left } from "./projectStyle";
 import laptop from "../../assets/laptop.png";
-import spiffy from "../../assets/spiffy.gif";
-import { useState } from "react";
 
 const Projects = ({ project1, project2 }) => {
-  const { name, image, desc } = project1;
+  const { name, image, desc, liveUrl, codeUrl } = project1;
   const name2 = project2.name;
   const image2 = project2.image;
   const desc2 = project2.desc;
+  const liveUrl2 = project2.liveUrl;
+  const codeUrl2 = project2.codeUrl;
   return (
     <Main id="project">
       <Left>
@@ -45,10 +45,10 @@ const Projects = ({ project1, project2 }) => {
             ))}
           </div>
           <div className="buttons">
-            <a href="">
+            <a href={liveUrl} target="_blank">
               <button>View Live</button>
             </a>
-            <a href="">
+            <a href={codeUrl} target="_blank">
               <button>View Code</button>
             </a>
           </div>
@@ -76,10 +76,10 @@ const Projects = ({ project1, project2 }) => {
             ))}
           </div>
           <div className="buttons">
-            <a href="">
+            <a href={liveUrl2} target="_blank">
               <button>View Live</button>
             </a>
-            <a href="">
+            <a href={codeUrl2} target="_blank">
               <button>View Code</button>
             </a>
           </div>

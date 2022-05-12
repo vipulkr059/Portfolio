@@ -75,7 +75,6 @@ export const IntroContainer = styled.div`
   }
   @media (max-width: 480px) {
     .name {
-      /* margin: 3rem 0 0 3rem; */
     }
   }
 `;
