@@ -1,22 +1,21 @@
 import React from "react";
 import Circle from "./Circle";
 import { Main, Left, Right } from "./skillStyle";
-
+import RightSide from "./RightSide";
+const skills = [
+  { id: 1, skill: "html", p: 65 },
+  { id: 2, skill: "CSS", p: 76 },
+  { id: 3, skill: "Javascript", p: 68 },
+  { id: 4, skill: "Java", p: 78 },
+  { id: 5, skill: "ReactJs", p: 80 },
+  { id: 6, skill: "NodeJs", p: 72 },
+  { id: 7, skill: "ExpressJs", p: 70 },
+  { id: 8, skill: "MongoDb", p: 62 },
+];
 export default function Skills() {
-  const skills = [
-    { id: 1, skill: "html", p: 65 },
-    { id: 2, skill: "CSS", p: 76 },
-    { id: 3, skill: "Javascript", p: 68 },
-    { id: 4, skill: "Java", p: 78 },
-    { id: 5, skill: "ReactJs", p: 80 },
-    { id: 6, skill: "NodeJs", p: 72 },
-    { id: 7, skill: "ExpressJs", p: 70 },
-    { id: 8, skill: "MongoDb", p: 62 },
-  ];
   return (
-    <Main id="skills">
+    /*<Main id="skills">
       <Left
-        className="left"
         style={{
           backgroundColor: "#a276ff",
           borderRadius: "0px 25px 25px 0px",
@@ -27,22 +26,66 @@ export default function Skills() {
         </div>
         <div className="para" data-aos="fade-right" data-aos-duration="1500">
           <div>
-            I create successful responsive websites that are fast, easy to use,
-            and built with best practices. The main area of my expertise is
-            front-end development, HTML, CSS, JS, building small and medium web
-            apps, features, animations, and coding interactive layouts.
-            <br /> <br />
+            I'm a Full Stack Developer building the Front-end/Back-end of
+            Websites and Web Applications that leads to the success of the
+            overall product. Check out some of my work in the Projects section.
+            <br />
+            <br />
             I also have full-stack development experience with MongoDb,
-            expressJs, ReactJs & NodeJS. <br /> <br /> I Also Have Knowledge of
-            Data Structures And Algorithms And Problem Solving Skills with Java.
+            expressJs, ReactJs & NodeJS. <br />
+            <br />
+            I Also Have Knowledge of Data Structures And Algorithms And Problem
+            Solving Skills with Java.
+            <br />
+            <br />
+            I'm open to Job opportunities where I can contribute, learn and
+            grow. If you have a good opportunity that matches my skills and
+            experience then don't hesitate to contact me.
           </div>
         </div>
       </Left>
       <Right>
-        {skills.map((s) => (
-          <Circle p={s.p} skill={s.skill}></Circle>
-        ))}
+      
+        <RightSide />
       </Right>
-    </Main>
+    </Main>*/
+
+    <div className="flex flex-col bg-[#1b1c35] sm:flex-row">
+      <div className="flex flex-1 flex-col bg-[#a276ff] rounded-3xl items-center ">
+        <div
+          className="text-4xl text-white my-6 sm:text-7xl sm:my-8"
+          data-aos="fade-right"
+          data-aos-duration="1000"
+        >
+          Ski<span className="text-[#f76301]">ll</span>s
+        </div>
+        <div
+          className="text-sm mx-10 text-white sm:text-2xl flex justify-center"
+          data-aos="fade-right"
+          data-aos-duration="1500"
+        >
+          <div>
+            I'm a Full Stack Developer building the Front-end/Back-end of
+            Websites and Web Applications that leads to the success of the
+            overall product. Check out some of my work in the Projects section.
+            <br />
+            <br />
+            I also have full-stack development experience with MongoDb,
+            expressJs, ReactJs & NodeJS. <br />
+            <br />
+            I Also Have Knowledge of Data Structures And Algorithms And Problem
+            Solving Skills with Java.
+            <br />
+            <br />
+            I'm open to Job opportunities where I can contribute, learn and
+            grow. If you have a good opportunity that matches my skills and
+            experience then don't hesitate to contact me.
+          </div>
+        </div>
+      </div>
+      <div className="flex flex-1">
+        <RightSide />
+      </div>
+    </div>
   );
 }
