@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const Projects2 = ({ project }) => {
   return (
-    <div className="flex flex-col sm:flex-row bg-[#1b1c35]">
+    <div id="project" className="flex flex-col sm:flex-row bg-[#1b1c35]">
       <div className="flex flex-1 items-center justify-center ">
         <div>
           <img src={project.image} />
@@ -22,7 +22,9 @@ const Projects2 = ({ project }) => {
               View Live
             </a>
           </Button>
-          <Button>Case Study</Button>
+          <Button>
+            <Link to={`/projects/${project.id}`}>Case Study</Link>
+          </Button>
         </div>
       </div>
     </div>

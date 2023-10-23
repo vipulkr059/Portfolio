@@ -50,7 +50,7 @@ export default function Skills() {
       </Right>
     </Main>*/
 
-    <div className="flex flex-col bg-[#1b1c35] sm:flex-row">
+    <div id="skills" className="flex flex-col bg-[#1b1c35] sm:flex-row">
       <div className="flex flex-1 flex-col bg-[#a276ff] rounded-3xl items-center ">
         <div
           className="text-4xl text-white my-6 sm:text-7xl sm:my-8"

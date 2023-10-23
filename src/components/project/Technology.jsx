@@ -1,12 +1,20 @@
 import React from "react";
+import data from "../../data/project";
+import { Skill } from "../skills/rightSideStyle";
 
-const Technology = () => {
+const Technology = ({ projectId }) => {
   return (
-    <div className="flex flex-row bg-[#1b1c35]">
-      <div className="flex flex-1 bg-white text-9xl justify-center">
+    <div className="flex flex-col bg-[#1b1c35]">
+      <div className="flex text-5xl text-white justify-center mt-20 sm:text-7xl">
         <p>Tech Stack</p>
       </div>
-      <div className="flex flex-1"></div>
+      <Skill className="flex-1">
+        <div className="badgeContainer m-10">
+          {data[projectId].tech.map((t, idx) => {
+            return <img className="badge" key={idx} src={t} />;
+          })}
+        </div>
+      </Skill>
     </div>
   );
 };

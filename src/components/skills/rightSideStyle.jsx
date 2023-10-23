@@ -20,13 +20,13 @@ export const Skill = styled.div`
     }
     @media (max-width: 800px) {
       .badge {
-        width: 4rem;
+        width: 5rem;
         margin: 0.5em;
       }
     }
     @media (max-width: 480px) {
       .badge {
-        width: 3rem;
+        width: 5rem;
         margin: 0.5em;
       }
     }

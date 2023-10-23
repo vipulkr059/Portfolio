@@ -2,7 +2,7 @@ import React from "react";
 import data from "../../data/project";
 import iphone from "../../assets/iPhone 12 Pro.png";
 
-const Features = () => {
+const Features = ({ projectId }) => {
   return (
     <div className="flex flex-col-reverse bg-[#1b1c35] sm:flex-row">
       <div
@@ -16,14 +16,14 @@ const Features = () => {
         </div>
         <div className="text-base mx-10 text-white sm:text-2xl ">
           <ul className=" list-disc">
-            {data[0].feature.map((p, idx) => {
+            {data[projectId].feature.map((p, idx) => {
               return <li key={idx}>{p}</li>;
             })}
           </ul>
         </div>
       </div>
       <div className="flex flex-1 items-center justify-center">
-        <img src={iphone} />
+        <img src={data[projectId].featImage} />
       </div>
     </div>
   );
