@@ -6,8 +6,15 @@ import { Link } from "react-router-dom";
 
 const Projects2 = ({ project }) => {
   return (
-    <div id="project" className="flex flex-col sm:flex-row bg-[#1b1c35]">
-      <div className="flex flex-1 items-center justify-center ">
+    <div
+      id="project"
+      className="flex flex-col sm:flex-row bg-gradient-to-b from-[#111132] to-[rgb(12,12,29)]"
+    >
+      <div
+        className="flex flex-1 items-center justify-center "
+        data-aos="fade-up"
+        data-aos-duration="2000"
+      >
         <div>
           <img src={project.image} />
         </div>

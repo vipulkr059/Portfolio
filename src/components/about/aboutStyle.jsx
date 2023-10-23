@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import bg from "../../assets/bg.png";
 export const AboutContainer = styled.div`
-  background: #1b1c35;
+  background: linear-gradient(180deg, #111132, #0c0c1d);
   display: flex;
   flex-direction: column;
   color: white;

@@ -4,7 +4,7 @@ import iphone from "../../assets/iPhone 12 Pro.png";
 
 const Features = ({ projectId }) => {
   return (
-    <div className="flex flex-col-reverse bg-[#1b1c35] sm:flex-row">
+    <div className="flex flex-col-reverse  sm:flex-row">
       <div
         className="flex flex-1 flex-col items-center
       "

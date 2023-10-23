@@ -11,7 +11,7 @@ export const Skill = styled.div`
     flex-wrap: wrap;
 
     .badge {
-      width: 10rem;
+      width: 9rem;
       margin: 1em;
       transition: transform 0.7s ease-in-out;
     }

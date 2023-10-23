@@ -20,17 +20,13 @@ import Project from "./components/project/Project";
 import { Outlet } from "react-router-dom";
 
 const Main = styled.div`
-  height: 100vh;
-  width: 100vw;
-
   .sections::-webkit-scrollbar {
     display: none;
   }
   .sections {
-    width: 100%;
-    height: 100%;
+    height: 100vh;
     position: relative;
-    scroll-snap-type: y mandatory;
+    scroll-snap-align: center;
 
     > * {
       height: 100vh;

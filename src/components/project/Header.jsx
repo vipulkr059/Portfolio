@@ -4,7 +4,7 @@ import { Button } from "../projects/projectStyle";
 
 const Header = ({ projectId }) => {
   return (
-    <div className="flex flex-col-reverse bg-[#1b1c35] sm:flex-row">
+    <div className="flex flex-col-reverse sm:flex-row">
       <div className="flex flex-1 flex-col text-5xl text-white justify-center items-center sm:text-7xl">
         <div className="">
           <p>{data[projectId].name}</p>

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Main = styled.div`
-  background-color: #1b1c35;
+  background: linear-gradient(180deg, #111132, #0c0c1d);
   display: flex;
   flex-direction: row;
   align-items: center;

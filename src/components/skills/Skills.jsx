@@ -50,7 +50,10 @@ export default function Skills() {
       </Right>
     </Main>*/
 
-    <div id="skills" className="flex flex-col bg-[#1b1c35] sm:flex-row">
+    <div
+      id="skills"
+      className="flex flex-col bg-gradient-to-b from-[#111132] to-[#0c0c1d] sm:flex-row"
+    >
       <div className="flex flex-1 flex-col bg-[#a276ff] rounded-3xl items-center ">
         <div
           className="text-4xl text-white my-6 sm:text-7xl sm:my-8"
@@ -83,7 +86,7 @@ export default function Skills() {
           </div>
         </div>
       </div>
-      <div className="flex flex-1">
+      <div className="flex flex-1 ">
         <RightSide />
       </div>
     </div>

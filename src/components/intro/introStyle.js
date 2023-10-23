@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const IntroContainer = styled.div`
-  background: #1b1c35;
+  /* background: #1b1c35; */
+  background: linear-gradient(180deg, #111132, #0c0c1d);
   display: flex;
   flex-direction: column;
   .name {

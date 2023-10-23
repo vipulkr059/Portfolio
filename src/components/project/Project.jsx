@@ -16,7 +16,7 @@ const Project = () => {
   }, []);
 
   return (
-    <div>
+    <div className=" bg-gradient-to-b from-[#111132] to-[#0c0c1d]">
       <Button className="z-10 fixed m-10">
         <Link to="/">
           <span>
