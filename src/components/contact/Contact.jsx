@@ -1,11 +1,35 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import { Main } from "./contactStyle";
 import insta from "../../assets/insta.svg";
 import leetcode from "../../assets/leetcode.png";
 import github from "../../assets/github.svg";
 import linkd from "../../assets/linkd.svg";
+import emailjs from "@emailjs/browser";
 
-export default function contact() {
+const Contact = () => {
+  const formRef = useRef();
+  const [error, setError] = useState(false);
+  const [success, setSuccess] = useState(false);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_SERVICE_KEY,
+        process.env.REACT_APP_TEMPLATE_KEY,
+        formRef.current,
+        process.env.REACT_APP_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          setSuccess(true);
+        },
+        (error) => {
+          setError(true);
+        }
+      );
+  };
   return (
     <Main id="contact">
       <div class="contact-box">
@@ -51,9 +75,9 @@ export default function contact() {
           data-aos="fade-down"
           data-aos-duration="1500"
         >
-          <form>
+          <form ref={formRef} onSubmit={sendEmail}>
             <div class="form-item">
-              <input type="text" name="sender" required />
+              <input type="text" name="name" required />
               <label>Name:</label>
             </div>
             <div class="form-item">
@@ -64,10 +88,17 @@ export default function contact() {
               <textarea class="" name="message" required></textarea>
               <label>Message:</label>
             </div>
-            <button class="submit-btn">Send</button>
+            <button type="submit" class="submit-btn">
+              Send
+            </button>
+
+            {error && <p className=" text-red-600">Error</p>}
+            {success && <p className="text-green-500">Message Sent</p>}
           </form>
         </div>
       </div>
     </Main>
   );
-}
+};
+
+export default Contact;

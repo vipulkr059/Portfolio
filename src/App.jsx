@@ -18,6 +18,7 @@ import Projects2 from "./components/projects/Projects2";
 import data from "./data/project";
 import Project from "./components/project/Project";
 import { Outlet } from "react-router-dom";
+import Cursor from "./components/cursor/Cursor";
 
 const Main = styled.div`
   height: 100vh;
@@ -34,7 +35,7 @@ const Main = styled.div`
 
     > * {
       height: 100vh;
-      scroll-snap-align: start;
+      scroll-snap-align: center;
     }
   }
 `;

@@ -63,7 +63,7 @@ export default function Skills() {
           Ski<span className="text-[#f76301]">ll</span>s
         </div>
         <div
-          className="text-sm mx-10 text-white sm:text-2xl flex justify-center"
+          className="text-sm mx-10 text-white sm:text-2xl flex justify-center sm:ml-28"
           data-aos="fade-right"
           data-aos-duration="1500"
         >

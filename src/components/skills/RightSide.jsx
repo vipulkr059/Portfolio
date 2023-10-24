@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import java from "../../assets/java.png";
 import javascript from "../../assets/javascript.png";
 import css from "../../assets/css.png";
@@ -12,6 +12,7 @@ import mySql from "../../assets/mysql.png";
 import next from "../../assets/next.png";
 import express from "../../assets/express.png";
 import { Skill } from "./rightSideStyle";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const skills = [
   { id: 1, skill: "Html", image: html },
@@ -29,6 +30,15 @@ const skills = [
 ];
 
 const RightSide = () => {
+  const ref = useRef();
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
+
+  const yText = useTransform(scrollYProgress, [0, 1], ["0%", "500%"]);
+  const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
   return (
     <Skill>
       <div className="badgeContainer">
@@ -36,6 +46,7 @@ const RightSide = () => {
           return <img className="badge" key={skill.id} src={skill.image} />;
         })}
       </div>
+      <motion.div style={{ x: yBg }} className="stars"></motion.div>
     </Skill>
   );
 };
