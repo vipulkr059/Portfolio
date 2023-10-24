@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Menu = styled.div`
   display: none;
+
   @media (max-width: 800px) {
     display: block;
   }
@@ -104,7 +105,7 @@ export const Menu = styled.div`
     position: fixed;
     top: 0;
     right: -300px;
-    z-index: 3;
+    z-index: 10;
     display: flex;
     flex-direction: column;
     align-items: center;
