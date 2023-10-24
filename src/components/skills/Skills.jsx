@@ -1,6 +1,6 @@
 import React from "react";
-import Circle from "./Circle";
-import { Main, Left, Right } from "./skillStyle";
+
+// import { Main, Left, Right } from "./skillStyle";
 import RightSide from "./RightSide";
 const skills = [
   { id: 1, skill: "html", p: 65 },
