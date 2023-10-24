@@ -4,6 +4,8 @@ import Cards from "./Cards";
 import bg from "../../assets/bg.png";
 import ait from "../../assets/ait.png";
 import ggsipu from "../../assets/ggsipu.jpg";
+import Card from "./Card";
+import Tiles from "./Tiles";
 
 const About = () => {
   const ed1 = {
@@ -24,8 +26,10 @@ const About = () => {
     <AboutContainer id="about">
       <Container>
         <div classname="text" data-aos="fade-right" data-aos-duration="2000">
-          I'm a Front-End Developer located in Delhi. I have a passion for UI
-          effects, animations and creating intuitive, dynamic user experiences.
+          I'm a Full Stack Developer located in Delhi. I have a passion for UI
+          effects, animations and creating intuitive, dynamic user experiences
+          and use my extensive knowledge of programming languages and frameworks
+          to develop efficient web applications.
           <br />
           Well-organised person, problem solver and an Sketch Artist.
           <br />
@@ -55,37 +59,10 @@ const About = () => {
         >
           <span className="high">Edu</span>cation
         </span>
-        {/*<div
-          classname="para"
-          data-aos="fade-right"
-          data-aos-duration="2000"
-          data-aos-offset="10"
-        >
-          I'm a Front-End Developer located in Delhi. I have a passion for UI
-          effects, animations and creating intuitive, dynamic user experiences.
-      </div>*/}
+
         <Cards ed={ed1}></Cards>
         <Cards ed={ed2}></Cards>
       </Container2>
-
-      {/*<div className="upper">
-        <div classname="paragraph">
-          I'm a Front-End Developer located in Delhi. I have a passion for UI
-          effects, animations and creating intuitive, dynamic user experiences.
-        </div>
-        <span className="heading">
-          <span className="high">Edu</span>cation
-        </span>
-      </div>
-      <div className="lower">
-        <span className="heading">
-          ABOUT <span className="high"> ME</span>
-        </span>
-        <div classname="para">
-          I'm a Front-End Developer located in Delhi. I have a passion for UI
-          effects, animations and creating intuitive, dynamic user experiences.
-        </div>
-  </div>*/}
     </AboutContainer>
   );
 };

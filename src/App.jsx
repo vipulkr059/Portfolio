@@ -12,7 +12,13 @@ import euphony from "./assets/euphony.gif";
 import spiffy from "./assets/spiffy.gif";
 import voting from "./assets/voting.gif";
 import mask from "./assets/mask.gif";
-import { useState } from "react";
+import React, { useState } from "react";
+import "./index.css";
+import Projects2 from "./components/projects/Projects2";
+import data from "./data/project";
+import Project from "./components/project/Project";
+import { Outlet } from "react-router-dom";
+import Cursor from "./components/cursor/Cursor";
 
 const Main = styled.div`
   height: 100vh;
@@ -29,63 +35,15 @@ const Main = styled.div`
 
     > * {
       height: 100vh;
-      scroll-snap-align: start;
+      scroll-snap-align: center;
     }
   }
 `;
 
 function App() {
-  const project1 = {
-    name: "Spiffy Shirts",
-    image: spiffy,
-    desc: [
-      "E-Commerce Webapp Based on MERN Stack.",
-      "Database Manage and Hosted on MongoDB Atlas.",
-      " UI Designed with React and Style Components.",
-      "used in famous E-Commerce. Served Live on Heroku.",
-    ],
-    liveUrl: "https://spiffy-shirts-h.herokuapp.com/",
-    codeUrl: "https://github.com/vipulkr059/Spiffy-Shirts-Local-Version",
-  };
-  const project2 = {
-    name: "Mask On",
-    image: mask,
-    desc: [
-      "A game Based On Covid pandemic.",
-      "It was developed on HTML, CSS & JAVAscript.",
-      "Soothing Music and GAmeplay Experience.",
-      "Addictive For KIds.",
-    ],
-    liveUrl: "https://mask-on.netlify.app/",
-    codeUrl: "https://github.com/vipulkr059/Mask-On-Game-",
-  };
-  const project3 = {
-    name: "Euphony",
-    image: euphony,
-    desc: [
-      "Music WebApp Integrated With Spotify Web API",
-      "It is Based on Node JS, Express JS, & React JS",
-      "It has all functionality like Player, Searching etc.",
-      "UI is Designed with Styled Components & React",
-    ],
-    liveUrl: "https://github.com/vipulkr059/Euphony",
-    codeUrl: "https://github.com/vipulkr059/Euphony",
-  };
-  const project4 = {
-    name: "Online Voting System",
-    image: voting,
-    desc: [
-      "An Online Voting System Based on Java, Servlet, JSP.",
-      "It allows to automate Voting operations digitally.",
-      "UI Designed with HTML ,CSS And JavaScript.",
-      "Database Managed and Maintain With SQL",
-    ],
-    liveUrl: "https://github.com/vipulkr059/Online-Voting-System",
-    codeUrl: "https://github.com/vipulkr059/Online-Voting-System",
-  };
   const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <Main>
+    <React.Fragment>
       <Sidebar className="desktop" />
       <SidebarMobile
         className="mobile"
@@ -98,11 +56,12 @@ function App() {
         <Quote />
         <Skills />
         <Header />
-        <Projects project1={project1} project2={project2} />
-        <Projects project1={project3} project2={project4} />
+        {data.map((p) => {
+          return <Projects2 project={p} />;
+        })}
         <Contact />
       </div>
-    </Main>
+    </React.Fragment>
   );
 }
 

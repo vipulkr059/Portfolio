@@ -1,102 +1,53 @@
 import React from "react";
 import styled, { css } from "styled-components";
 import { IntroContainer, Left, Right } from "./introStyle";
-import Pr from "../../assets/profile.svg";
-import Elipse1 from "../../assets/Ellipse1.svg";
-import Elipse2 from "../../assets/Ellipse2.svg";
-import Elipse3 from "../../assets/Ellipse3.svg";
-import Elipse4 from "../../assets/Elipse4.svg";
-import { init } from "ityped";
+import Profile from "../../assets/hero.png";
 import { useEffect, useRef } from "react";
+import TypeAnimate from "./TypeAnimate";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { Button } from "../projects/projectStyle";
 
 export default function Intro() {
-  // const textRef = useRef();
+  const ref = useRef();
 
-  // useEffect(() => {
-  //   init(textRef.current, {
-  //     showCursor: false,
-  //     backDelay: 1000,
-  //     backSpeed: 80,
-  //     strings: ["hello", "hi"],
-  //   });
-  // }, []);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
 
+  const yText = useTransform(scrollYProgress, [0, 1], ["0%", "500%"]);
+  const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
   return (
-    <IntroContainer id="intro">
+    <IntroContainer id="intro" ref={ref}>
+      <motion.div style={{ x: yBg }} className="stars"></motion.div>
       <Left>
-        <div className="imgcon" data-aos="fade-down" data-aos-duration="1000">
-          <img src={Pr} alt="" />
-        </div>
+        <motion.div className="absolute w-3/4 sm:w-4/12 sm:bottom-0">
+          <img src={Profile} alt="" />
+        </motion.div>
       </Left>
       <Right>
-        <div className="name">
+        <motion.div style={{ x: yText }} className="name">
           <div
             className="text"
             data-aos="fade-right"
             data-aos-easing="ease-in-sine"
-            data-aos-duration="1500"
+            data-aos-duration="1000"
           >
             <div>HI,</div>
             <div>
               I'M <span className="high">VIPUL</span>,
             </div>
-            <div>WEB DEVELOPER</div>
-            <div className="small">
-              <span className="sma">FrontEnd / Full Stack Developer</span>
+            <div className="text-5xl sm:text-8xl">
+              <TypeAnimate />
             </div>
           </div>
+        </motion.div>
+        <div className="absolute bottom-0 m-12 sm:left-20 sm:m-16">
+          <a href="/VipulResume.pdf" download="Vipul_Resume" target="_blank">
+            <Button>Download Resume</Button>
+          </a>
         </div>
       </Right>
-
-      {/*<div className="name">
-        <div
-          className="text"
-          data-aos="fade-right"
-          data-aos-easing="ease-in-sine"
-          data-aos-duration="1500"
-        >
-          <div>HI,</div>
-          <div>
-            I'M <span className="high">VIPUL</span>,
-          </div>
-          <div>WEB DEVELOPER</div>
-          <div className="small">
-            <span className="sma">FrontEnd / Full Stack Developer</span>
-          </div>
-        </div>
-      </div>
-      <div
-        className="imgcon"
-        data-aos="fade-up"
-        data-aos-anchor-placement="top-center"
-        data-aos-duration="1000"
-      >
-        <img src={Pr} alt="" />
-      </div>
-      {/*<div className="left">
-        <div className="text">
-          <div>HI,</div>
-          <div>
-            I'M <span className="high">VIPUL</span>,
-          </div>
-          <div>WEB DEVELOPER</div>
-          <div className="small">
-            <span className="sma">FrontEnd / Full Stack Developer</span>
-          </div>
-        </div>
-      </div>
-      <div className="right">
-        <div className="imgcon">
-          <img src={Pr} alt="" />
-        </div>
-  </div>*/}
-
-      {/*<div className="elipses">
-        <img className="e1" src={Elipse1} alt="" />
-        <img className="e2" src={Elipse2} alt="" />
-        <img className="e3" src={Elipse3} alt="" />
-        <img className="e4" src={Elipse4} alt="" />
-  </div>*/}
     </IntroContainer>
   );
 }

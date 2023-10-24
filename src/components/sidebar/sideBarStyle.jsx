@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Side = styled.div`
   padding: 0;
   margin: 0;
-  z-index: 3;
+  z-index: 10;
   box-sizing: border-box;
   font-family: "Quicksand", sans-serif;
   display: block;

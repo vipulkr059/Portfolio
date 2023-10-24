@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  background-color: #1b1c35;
+  background-color: linear-gradient(180deg, #111132, #0c0c1d);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -80,6 +80,50 @@ export const Container = styled.div`
     .ellipse3 {
       width: 30%;
       right: 1rem;
+    }
+  }
+  .parallax {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: white;
+    flex-direction: column;
+
+    .astro {
+      background-image: url("/astronaut.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: bottom;
+      height: 50%;
+      position: absolute;
+      z-index: 3;
+      bottom: 0;
+      right: 0;
+    }
+    .stars {
+      background-image: url("/stars.png");
+      background-size: cover;
+      background-position: bottom;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 1;
+    }
+    .moon {
+      background-image: url("/moon.png");
+      background-size: contain;
+      width: 25%;
+      height: 25%;
+      position: absolute;
+      z-index: 2;
+      background-repeat: no-repeat;
+      top: 0;
+      left: 0;
+      margin: 8rem;
     }
   }
 `;

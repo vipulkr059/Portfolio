@@ -80,3 +80,60 @@ export const Container = styled.div`
     }
   }
 `;
+
+export const NewCon = styled.div`
+  .parallax {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: white;
+    flex-direction: column;
+    div {
+      font-family: "Cedarville Cursive", cursive;
+    }
+    span {
+      font-family: "Cedarville Cursive", cursive;
+      color: #f76301;
+      font-size: 1.5rem;
+    }
+
+    .mars {
+      background-image: url(/mars.png);
+      background-size: contain;
+      width: 25%;
+      height: 25%;
+      position: absolute;
+      z-index: 2;
+      background-repeat: no-repeat;
+      top: 0;
+      left: 0;
+      margin: 8rem;
+    }
+
+    .astro {
+      background-image: url("/astronaut.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: bottom;
+
+      height: 50%;
+      position: absolute;
+      z-index: 3;
+      bottom: 0;
+      right: 0;
+    }
+    .stars {
+      background-image: url("/stars.png");
+      background-size: cover;
+      background-position: bottom;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 1;
+    }
+  }
+`;

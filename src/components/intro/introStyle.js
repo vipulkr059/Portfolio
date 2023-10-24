@@ -1,8 +1,15 @@
 import styled from "styled-components";
 
 export const IntroContainer = styled.div`
-  background: #1b1c35;
+  /* background: #1b1c35; */
+  background: linear-gradient(180deg, #111132, #0c0c1d);
+  /* display: flex;
+  flex-direction: column; */
+
+  position: relative;
   display: flex;
+  overflow: hidden;
+  color: white;
   flex-direction: column;
   .name {
     position: absolute;
@@ -58,9 +65,13 @@ export const IntroContainer = styled.div`
       }
     }
   }
+  img {
+    transition: all 0.3s ease-in-out;
+    z-index: 3;
+  }
   img:hover {
     transition: all 0.6s ease;
-    transform: translate(-2%, -2%) scale(1.05);
+    transform: translate(-2%, -2%) scale(1.03);
     transform-origin: center;
 
     &:after {
@@ -77,18 +88,26 @@ export const IntroContainer = styled.div`
     .name {
     }
   }
+  .stars {
+    background-image: url("/stars.png");
+    background-size: cover;
+    background-position: bottom;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+  }
 `;
 
 export const Left = styled.div`
   display: flex;
   flex: 1;
   justify-content: flex-end;
-  .imgcon {
-    z-index: 2;
-    bottom: 10rem;
-    img {
-      width: 60%;
-    }
+  z-index: 3;
+  img {
+    position: absolute;
+
+    bottom: 0;
   }
 
   @media (max-width: 800px) {
@@ -108,6 +127,8 @@ export const Right = styled.div`
   flex: 1;
   background-color: #a276ff;
   border-radius: 25px 25px 0px 0px;
+  z-index: 1;
+  
   .name {
     z-index: 2;
     bottom: 10rem;
