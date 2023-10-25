@@ -25,7 +25,7 @@ export const Skill = styled.div`
     z-index: 1;
 
     .badge {
-      width: 9rem;
+      width: 7rem;
       margin: 1em;
       transition: transform 0.7s ease-in-out;
     }

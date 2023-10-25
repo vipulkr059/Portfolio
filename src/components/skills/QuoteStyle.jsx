@@ -8,6 +8,7 @@ export const Container = styled.div`
   flex-direction: column;
   color: white;
   position: relative;
+
   div {
     font-family: "Cedarville Cursive", cursive;
     width: 50%;
@@ -82,6 +83,8 @@ export const Container = styled.div`
 `;
 
 export const NewCon = styled.div`
+  height: 100vh;
+  scroll-snap-align: center;
   .parallax {
     width: 100%;
     height: 100%;

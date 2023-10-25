@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { AboutContainer, Container, Container2 } from "./aboutStyle";
+import { Container, Container2 } from "./aboutStyle";
 import Cards from "./Cards";
 import bg from "../../assets/bg.png";
 import ait from "../../assets/ait.png";
@@ -23,9 +23,16 @@ const About = () => {
     branch: "Diploma in Information Technology",
   };
   return (
-    <AboutContainer id="about">
+    <div
+      id="about"
+      className=" h-screen flex flex-col snap-center text-white bg-gradient-to-b from-[#111132] to-[rgb(12,12,29)] "
+    >
       <Container>
-        <div classname="text" data-aos="fade-right" data-aos-duration="2000">
+        <div
+
+        // data-aos="fade-right"
+        // data-aos-duration="2000"
+        >
           I'm a Full Stack Developer located in Delhi. I have a passion for UI
           effects, animations and creating intuitive, dynamic user experiences
           and use my extensive knowledge of programming languages and frameworks
@@ -38,11 +45,11 @@ const About = () => {
         </div>
         <span
           className="heading"
-          data-aos="fade-right"
-          data-aos-duration="2000"
-          data-aos-offset="10"
+          // data-aos="fade-right"
+          // data-aos-duration="2000"
+          // data-aos-offset="10"
         >
-          ABOUT&nbsp;<span className="high"> ME</span>
+          ABOUT&nbsp;<span className="text-[#f76301]"> ME</span>
         </span>
       </Container>
       <Container2
@@ -63,7 +70,7 @@ const About = () => {
         <Cards ed={ed1}></Cards>
         <Cards ed={ed2}></Cards>
       </Container2>
-    </AboutContainer>
+    </div>
   );
 };
 
