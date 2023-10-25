@@ -6,6 +6,8 @@ export const Main = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  height: 100vh;
+  scroll-snap-align: center;
 
   #contact {
     background-color: #fff;

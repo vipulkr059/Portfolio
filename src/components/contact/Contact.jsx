@@ -32,17 +32,17 @@ const Contact = () => {
   };
   return (
     <Main id="contact">
-      <div class="contact-box">
+      <div className="contact-box">
         <div
-          class="contact-links"
+          className="contact-links"
           data-aos="fade-down"
           data-aos-duration="1500"
         >
           <h2>
             CON<span>TA</span>CT
           </h2>
-          <div class="links">
-            <div class="link">
+          <div className="links">
+            <div className="link">
               <a
                 href="https://www.linkedin.com/in/vipul-kumar-520465215/"
                 target="_blank"
@@ -50,12 +50,12 @@ const Contact = () => {
                 <img src={linkd} alt="linkedin" />
               </a>
             </div>
-            <div class="link">
+            <div className="link">
               <a href="https://github.com/vipulkr059" target="_blank">
                 <img src={github} alt="github" />
               </a>
             </div>
-            <div class="link">
+            <div className="link">
               <a
                 href="https://www.instagram.com/vipul_choudhary_/?hl=en"
                 target="_blank"
@@ -63,7 +63,7 @@ const Contact = () => {
                 <img src={insta} alt="insta" />
               </a>
             </div>
-            <div class="link">
+            <div className="link">
               <a href="https://leetcode.com/vipulkr059/" target="_blank">
                 <img src={leetcode} alt="leetcode" />
               </a>
@@ -71,29 +71,29 @@ const Contact = () => {
           </div>
         </div>
         <div
-          class="contact-form-wrapper"
+          className="contact-form-wrapper"
           data-aos="fade-down"
           data-aos-duration="1500"
         >
           <form ref={formRef} onSubmit={sendEmail}>
-            <div class="form-item">
+            <div className="form-item">
               <input type="text" name="name" required />
               <label>Name:</label>
             </div>
-            <div class="form-item">
+            <div className="form-item">
               <input type="text" name="email" required />
               <label>Email:</label>
             </div>
-            <div class="form-item">
-              <textarea class="" name="message" required></textarea>
+            <div className="form-item">
+              <textarea className="" name="message" required></textarea>
               <label>Message:</label>
             </div>
-            <button type="submit" class="submit-btn">
+            <button type="submit" className="submit-btn">
               Send
             </button>
 
-            {error && <p className=" text-red-600">Error</p>}
-            {success && <p className="text-green-500">Message Sent</p>}
+            {error && <p classNameName=" text-red-600">Error</p>}
+            {success && <p classNameName="text-green-500">Message Sent</p>}
           </form>
         </div>
       </div>

@@ -1,24 +1,15 @@
-import styled from "styled-components";
+import React, { useState } from "react";
 import About from "./components/about/About";
+import Contact from "./components/contact/Contact";
 import Intro from "./components/intro/Intro";
+import Header from "./components/projects/Header";
+import Projects2 from "./components/projects/Projects2";
 import Sidebar from "./components/sidebar/Sidebar";
 import SidebarMobile from "./components/sidebar/SidebarMobile";
-import Skills from "./components/skills/Skills";
 import Quote from "./components/skills/Quote";
-import Contact from "./components/contact/Contact";
-import Projects from "./components/projects/Projects";
-import Header from "./components/projects/Header";
-import euphony from "./assets/euphony.gif";
-import spiffy from "./assets/spiffy.gif";
-import voting from "./assets/voting.gif";
-import mask from "./assets/mask.gif";
-import React, { useState } from "react";
-import "./index.css";
-import Projects2 from "./components/projects/Projects2";
+import Skills from "./components/skills/Skills";
 import data from "./data/project";
-import Project from "./components/project/Project";
-import { Outlet } from "react-router-dom";
-import Cursor from "./components/cursor/Cursor";
+import "./index.css";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -36,8 +27,8 @@ function App() {
         <Quote />
         <Skills />
         <Header />
-        {data.map((p) => {
-          return <Projects2 project={p} />;
+        {data.map((p, idx) => {
+          return <Projects2 key={idx} project={p} />;
         })}
         <Contact />
       </div>

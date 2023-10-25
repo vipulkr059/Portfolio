@@ -13,7 +13,7 @@ const TypeAnimate = () => {
         1000,
       ]}
       wrapper="span"
-      speed={50}
+      speed={40}
       repeat={Infinity}
     />
   );

@@ -1,67 +1,65 @@
-import React from "react";
-import { Side } from "./sideBarStyle";
-import { useEffect, useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faHouse,
   faAddressCard,
   faBriefcase,
+  faHouse,
   faLaptop,
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
-import { NavLink } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from "react";
+import { Side } from "./sideBarStyle";
 
 export default function Sidebar({ menuOpen, setMenuOpen }) {
   // const list = document.querySelectorAll(".list");
   // function activeLink() {
-  //   list.forEach((item) => item.classList.remove("active"));
+  //   list.forEach((item) => item.classNameList.remove("active"));
 
-  //   this.classList.add("active");
+  //   this.classNameList.add("active");
   // }
 
   // list.forEach((item) => item.addEventListener("click", activeLink));
   return (
     <div>
-      <Side class="navigation">
+      <Side className="navigation">
         <ul>
-          <li class="list">
+          <li className="list">
             <a href="#intro">
-              <span class="icon">
+              <span className="icon">
                 <FontAwesomeIcon icon={faHouse} />
               </span>
-              <span class="title">Home</span>
+              <span className="title">Home</span>
             </a>
           </li>
-          <li class="list">
+          <li className="list">
             <a href="#about">
-              <span class="icon">
+              <span className="icon">
                 <FontAwesomeIcon icon={faAddressCard} />
               </span>
-              <span class="title">About</span>
+              <span className="title">About</span>
             </a>
           </li>
-          <li class="list">
+          <li className="list">
             <a href="#skills">
-              <span class="icon">
+              <span className="icon">
                 <FontAwesomeIcon icon={faLaptop} />
               </span>
-              <span class="title">SKILLS</span>
+              <span className="title">SKILLS</span>
             </a>
           </li>
-          <li class="list">
+          <li className="list">
             <a href="#project">
-              <span class="icon">
+              <span className="icon">
                 <FontAwesomeIcon icon={faBriefcase} />
               </span>
-              <span class="title">Project</span>
+              <span className="title">Project</span>
             </a>
           </li>
-          <li class="list">
+          <li className="list">
             <a href="#contact">
-              <span class="icon">
+              <span className="icon">
                 <FontAwesomeIcon icon={faPhone} />
               </span>
-              <span class="title">Contact</span>
+              <span className="title">Contact</span>
             </a>
           </li>
         </ul>

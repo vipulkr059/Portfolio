@@ -23,16 +23,6 @@ const Main = styled.div`
   .sections::-webkit-scrollbar {
     display: none;
   }
-  .sections {
-    height: 100vh;
-    position: relative;
-    scroll-snap-align: center;
-
-    > * {
-      height: 100vh;
-      scroll-snap-align: start;
-    }
-  }
 `;
 
 function Layout() {

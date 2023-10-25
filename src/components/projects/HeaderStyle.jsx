@@ -8,6 +8,8 @@ export const Container = styled.div`
   flex-direction: column;
   color: white;
   position: relative;
+  height: 100vh;
+  scroll-snap-align: center;
   .ellipse1 {
     position: absolute;
     top: 3rem;

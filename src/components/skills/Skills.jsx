@@ -52,18 +52,18 @@ export default function Skills() {
 
     <div
       id="skills"
-      className="flex flex-col bg-gradient-to-b from-[#111132] to-[#0c0c1d] sm:flex-row"
+      className="flex flex-col h-screen snap-center bg-gradient-to-b from-[#111132] to-[#0c0c1d] lg:flex-row"
     >
       <div className="flex flex-1 flex-col bg-[#a276ff] rounded-3xl items-center ">
         <div
-          className="text-4xl text-white my-6 sm:text-7xl sm:my-8"
+          className="text-4xl text-white my-6 sm:text-6xl sm:my-8"
           data-aos="fade-right"
           data-aos-duration="1000"
         >
           Ski<span className="text-[#f76301]">ll</span>s
         </div>
         <div
-          className="text-sm mx-10 text-white sm:text-2xl flex justify-center sm:ml-28"
+          className="text-sm mx-10 text-white sm: text-xl flex justify-center sm:ml-28"
           data-aos="fade-right"
           data-aos-duration="1500"
         >

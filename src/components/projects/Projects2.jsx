@@ -8,7 +8,7 @@ const Projects2 = ({ project }) => {
   return (
     <div
       id="project"
-      className="flex flex-col sm:flex-row bg-gradient-to-b from-[#111132] to-[rgb(12,12,29)]"
+      className="flex flex-col h-screen snap-center lg:flex-row bg-gradient-to-b from-[#111132] to-[rgb(12,12,29)]"
     >
       <div
         className="flex flex-1 items-center justify-center "

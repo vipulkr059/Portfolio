@@ -5,7 +5,8 @@ export const IntroContainer = styled.div`
   background: linear-gradient(180deg, #111132, #0c0c1d);
   /* display: flex;
   flex-direction: column; */
-
+  height: 100vh;
+  scroll-snap-align: center;
   position: relative;
   display: flex;
   overflow: hidden;
@@ -17,15 +18,9 @@ export const IntroContainer = styled.div`
     padding-top: 9rem; */
 
     .text {
-      font-weight: 400;
-      font-size: 6rem;
-
       color: white;
       text-shadow: 4px 4px 4px rgb(0 0 0 / 25%), 15px 17px 4px rgb(0 0 0 / 40%);
-      @media (max-width: 800px) {
-        font-size: 3rem;
-        line-height: 4rem;
-      }
+
       .high {
         color: #f76301;
       }
@@ -45,26 +40,7 @@ export const IntroContainer = styled.div`
       padding-left: 4rem; */
     }
   }
-  .imgcon {
-    position: absolute;
-    /* width: auto; */
-    /* padding-left: 50%; */
-    img {
-      width: 50%;
-      /* padding: 5rem 0rem 0rem 12rem; */
-      /* margin: 6rem 0rem 0rem 13rem; */
-    }
-    @media (max-width: 800px) {
-      /* display: flex;
-      flex-direction: column;
-      padding-left: 0%;
-      width: 100%; */
 
-      img {
-        /* padding: 9rem 6rem 3rem 7rem; */
-      }
-    }
-  }
   img {
     transition: all 0.3s ease-in-out;
     z-index: 3;
@@ -84,10 +60,6 @@ export const IntroContainer = styled.div`
       transition: opacity 0.6s linear;
     }
   }
-  @media (max-width: 480px) {
-    .name {
-    }
-  }
   .stars {
     background-image: url("/stars.png");
     background-size: cover;
@@ -104,22 +76,6 @@ export const Left = styled.div`
   flex: 1;
   justify-content: flex-end;
   z-index: 3;
-  img {
-    position: absolute;
-
-    bottom: 0;
-  }
-
-  @media (max-width: 800px) {
-    justify-content: center;
-    align-items: flex-end;
-    .imgcon {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      bottom: auto;
-    }
-  }
 `;
 
 export const Right = styled.div`
@@ -128,7 +84,7 @@ export const Right = styled.div`
   background-color: #a276ff;
   border-radius: 25px 25px 0px 0px;
   z-index: 1;
-  
+
   .name {
     z-index: 2;
     bottom: 10rem;
