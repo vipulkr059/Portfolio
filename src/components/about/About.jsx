@@ -58,12 +58,7 @@ const About = () => {
           borderRadius: "25px 25px 0px 0px",
         }}
       >
-        <span
-          className="heading"
-          data-aos="fade-right"
-          data-aos-anchor-placement="top-center"
-          data-aos-duration="1000"
-        >
+        <span className="heading">
           <span className="high">Edu</span>cation
         </span>
 

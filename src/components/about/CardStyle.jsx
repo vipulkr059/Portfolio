@@ -52,7 +52,6 @@ export const Container = styled.div`
         display: flex;
         flex-direction: column;
         flex: 0.5;
-        gap: 1rem;
       }
       @media (max-width: 800px) {
         .cardbody {
@@ -62,27 +61,27 @@ export const Container = styled.div`
           padding: 1.5rem 1rem 1.5rem 1rem;
         }
         .imgCon {
+          display: none;
           flex: 0.5;
           img {
             width: 90%;
             height: 90%;
           }
         }
-        h2 {
-          font-size: 1.2rem;
-        }
-        h3 {
-          font-size: 1rem;
-        }
 
         .text {
+          font-size: 1rem;
           padding: 0rem;
-          gap: 0;
         }
       }
       @media (max-width: 480px) {
         .cardbody {
-          height: 55%;
+          height: 85%;
+        }
+        .text {
+          justify-content: center;
+          align-items: center;
+          flex: 1;
         }
       }
     }

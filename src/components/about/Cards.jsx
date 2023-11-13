@@ -12,9 +12,9 @@ export default function Cards({ ed }) {
               <img src={image} alt="" />
             </div>
             <div className="text">
-              <h2>{univ}</h2>
-              <h3>{college}</h3>
-              <h3>{branch}</h3>
+              <p>{univ}</p>
+              <p>{college}</p>
+              <p>{branch}</p>
               <p>{time}</p>
             </div>
           </div>

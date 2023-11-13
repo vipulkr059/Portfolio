@@ -21,7 +21,7 @@ function App() {
         menuOpen={menuOpen}
         setMenuOpen={setMenuOpen}
       />
-      <div className="sections">
+      <div className="sections h-full">
         <Intro />
         <About />
         <Quote />
