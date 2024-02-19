@@ -4,7 +4,7 @@ import { Skill } from "../skills/rightSideStyle";
 
 const Technology = ({ projectId }) => {
   return (
-    <div className="flex flex-col ">
+    <div className="flex flex-col h-full ">
       <div className="flex text-5xl text-white justify-center mt-20 sm:text-7xl">
         <p>Tech Stack</p>
       </div>

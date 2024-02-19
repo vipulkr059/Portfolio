@@ -1,10 +1,9 @@
 import React from "react";
 import data from "../../data/project";
-import iphone from "../../assets/iPhone 12 Pro.png";
 
 const Features = ({ projectId }) => {
   return (
-    <div className="flex flex-col-reverse  sm:flex-row">
+    <div className="flex flex-col-reverse  sm:flex-row h-full">
       <div
         className="flex flex-1 flex-col items-center
       "

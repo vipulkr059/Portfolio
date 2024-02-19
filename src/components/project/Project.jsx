@@ -16,11 +16,11 @@ const Project = () => {
   }, []);
 
   return (
-    <div className=" bg-gradient-to-b from-[#111132] to-[#0c0c1d]">
-      <Button className="z-10 fixed m-10">
+    <div className=" bg-gradient-to-b from-[#111132] to-[#0c0c1d] h-full">
+      <Button className="z-10 fixed m-10 text-sm">
         <Link to="/">
           <span>
-            <FontAwesomeIcon icon={faStepBackward} /> Back
+            <FontAwesomeIcon icon={faStepBackward} />
           </span>
         </Link>
       </Button>
