@@ -10,6 +10,7 @@ import Quote from "./components/skills/Quote";
 import Skills from "./components/skills/Skills";
 import data from "./data/project";
 import "./index.css";
+import Works from "./components/projects/Works";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -30,6 +31,7 @@ function App() {
         {data.map((p, idx) => {
           return <Projects2 key={idx} project={p} />;
         })}
+        <Works />
         <Contact />
       </div>
     </React.Fragment>

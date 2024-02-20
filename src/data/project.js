@@ -22,6 +22,9 @@ import educatorHeader from "../assets/educatorheader.png";
 import educatorFeat from "../assets/educatorfeat.png";
 import spiffyHeader from "../assets/spiffyheader.png";
 import spiffyFeat from "../assets/spiffyfeat.png";
+import amenity from "../assets/amenity.png";
+import euphony from "../assets/euphony.png";
+import weather from "../assets/weather.png";
 
 const data = [
   {
@@ -147,37 +150,30 @@ const data = [
   },
 ];
 
-const extra = [
+export const extras = [
   {
-    name: "Mask On",
-    image: "",
-    desc: "A game Based On Covid pandemic. It was developed on HTML, CSS & JAVAscript. Soothing Music and GAmeplay Experience. Addictive For KIds.",
-    liveUrl: "https://mask-on.netlify.app/",
-    codeUrl: "https://github.com/vipulkr059/Mask-On-Game-",
+    id: 0,
+    name: "The Amenity",
+    image: amenity,
+    desc: "The Amenity is hotel bookings management tool based on React Js and Supabase. Hoteliers can efficiently oversee bookings, streamline check-ins and check-outs, manage room allocations, and track guest preferences with ease.",
+    liveUrl: "https://the-amenity.vercel.app/",
+    codeUrl: "https://github.com/vipulkr059/The-Amenity",
   },
   {
+    id: 1,
     name: "Euphony",
-    image: "",
-    desc: [
-      "Music WebApp Integrated With Spotify Web API",
-      "It is Based on Node JS, Express JS, & React JS",
-      "It has all functionality like Player, Searching etc.",
-      "UI is Designed with Styled Components & React",
-    ],
+    image: euphony,
+    desc: "A music webapp integrated with Spotify Api.Built on MERN. Discover new tracks, create personalized playlists, and explore curated recommendations tailored to your tastes, all within a sleek and intuitive user interface.",
     liveUrl: "https://github.com/vipulkr059/Euphony",
     codeUrl: "https://github.com/vipulkr059/Euphony",
   },
   {
-    name: "Online Voting System",
-    image: "",
-    desc: [
-      "An Online Voting System Based on Java, Servlet, JSP.",
-      "It allows to automate Voting operations digitally.",
-      "UI Designed with HTML ,CSS And JavaScript.",
-      "Database Managed and Maintain With SQL",
-    ],
-    liveUrl: "https://github.com/vipulkr059/Online-Voting-System",
-    codeUrl: "https://github.com/vipulkr059/Online-Voting-System",
+    id: 2,
+    name: "Weather-App",
+    image: weather,
+    desc: "Weather App your go to solution for instant weather updates with simplicity and style. Seamlessly designed for effortless navigation, this app provides real-time weather information at your fingertips.",
+    liveUrl: "https://react-weather-cast.netlify.app/",
+    codeUrl: "https://github.com/vipulkr059/Weather-App",
   },
 ];
 
