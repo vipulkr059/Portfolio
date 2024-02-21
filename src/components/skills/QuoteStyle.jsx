@@ -95,6 +95,7 @@ export const NewCon = styled.div`
     overflow: hidden;
     color: white;
     flex-direction: column;
+
     div {
       font-family: "Cedarville Cursive", cursive;
     }
