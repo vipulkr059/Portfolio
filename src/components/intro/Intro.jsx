@@ -19,7 +19,7 @@ export default function Intro() {
       <motion.div style={{ x: yBg }} className="stars"></motion.div>
       <Left>
         <div className="flex items-center justify-center absolute w-full lg:w-1/2 bottom-1/2  lg:bottom-0">
-          <img src={Profile} alt="" className=" w-3/5" />
+          <img src={Profile} alt="" className=" w-1/2  " />
         </div>
       </Left>
       <Right className="bg-gradient-to-tl from-fuchsia-400 to-blue-900">

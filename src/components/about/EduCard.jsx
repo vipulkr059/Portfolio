@@ -35,7 +35,9 @@ const Cards = styled.div`
       50% - 0.5rem
     ); Display cards in two columns on smaller screens */
   @media (max-width: 600px) {
-    max-width: 200px;
+    max-width: 190px;
+    height: 170px;
+    padding: 5px;
   }
 `;
 
@@ -44,12 +46,20 @@ const Heading = styled.div`
   -webkit-text-stroke-width: 0.5px;
   -webkit-text-stroke-color: black;
   letter-spacing: 1px;
+  @media (max-width: 600px) {
+    max-width: 375px;
+    font-size: large;
+  }
 `;
 const SubHeading = styled.div`
   font-size: larger;
   -webkit-text-stroke-width: 0.5px;
   -webkit-text-stroke-color: black;
   margin-bottom: 2px;
+  @media (max-width: 600px) {
+    max-width: 375px;
+    font-size: medium;
+  }
 `;
 const Description = styled.div`
   font-family: "Montserrat", sans-serif;

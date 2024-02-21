@@ -25,7 +25,7 @@ const Projects2 = ({ project }) => {
             {project.name}
           </p>
         </div>
-        <div className="p-10">
+        <div className="p-8">
           <p className="">{project.desc}</p>
         </div>
         <div className="flex  gap-10">
