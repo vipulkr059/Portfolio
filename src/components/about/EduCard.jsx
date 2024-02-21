@@ -3,7 +3,7 @@ import styled from "styled-components";
 const CardContainer = styled.div`
   perspective: 1000px;
   display: flex;
-  gap: 1rem;
+  gap: 0.5rem;
 `;
 
 const Cards = styled.div`
@@ -34,6 +34,9 @@ const Cards = styled.div`
     width: calc(
       50% - 0.5rem
     ); Display cards in two columns on smaller screens */
+  @media (max-width: 600px) {
+    max-width: 200px;
+  }
 `;
 
 const Heading = styled.div`
