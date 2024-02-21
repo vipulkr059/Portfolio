@@ -32,9 +32,9 @@ const Contact = () => {
   };
   return (
     <Main id="contact">
-      <div className="contact-box">
+      <div className="contact-box ">
         <div
-          className="contact-links"
+          className="contact-links "
           data-aos="fade-down"
           data-aos-duration="1500"
         >
@@ -71,7 +71,7 @@ const Contact = () => {
           </div>
         </div>
         <div
-          className="contact-form-wrapper"
+          className="contact-form-wrapper bg-gradient-to-tr from-orange-700 to-orange-500"
           data-aos="fade-down"
           data-aos-duration="1500"
         >

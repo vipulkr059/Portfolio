@@ -14,13 +14,13 @@ const CardWrapper = styled.div`
   /* box-shadow: 0 2px 5px rgb(134 138 146 / 50%); */
   padding: 20px;
   margin: 20px;
-  backdrop-filter: blur(16px) saturate(150%);
+  /* backdrop-filter: blur(16px) saturate(150%); */
   /* background-color: rgba(17, 25, 40, 0.25); */
-  background: linear-gradient(
+  /* background: linear-gradient(
     320deg,
     hsla(259, 100%, 73%, 1) 29%,
     hsla(240, 56%, 28%, 1) 100%
-  );
+  ); */
   color: white;
   cursor: pointer;
   transition: transform 0.5s;
@@ -58,9 +58,11 @@ const ButtonWrapper = styled.div`
 export default function ProjectCards({ project }) {
   const { name, image, desc, liveUrl: live, codeUrl: code } = project;
   return (
-    <CardWrapper>
+    <CardWrapper className="bg-gradient-to-tl from-fuchsia-400 to-blue-900">
       <CardImage src={image} alt="the amenity" />
-      <CardTitle>{name}</CardTitle>
+      <CardTitle className="drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)] text-orange-500">
+        {name}
+      </CardTitle>
       <CardContent>{desc}</CardContent>
       <ButtonWrapper>
         <Button>

@@ -22,7 +22,7 @@ export default function Intro() {
           <img src={Profile} alt="" className=" w-3/5" />
         </div>
       </Left>
-      <Right>
+      <Right className="bg-gradient-to-tl from-fuchsia-400 to-blue-900">
         <div className="name">
           <div
             className="text text-4xl md:text-6xl"

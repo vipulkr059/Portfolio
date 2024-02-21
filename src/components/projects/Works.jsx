@@ -1,7 +1,8 @@
-import React from "react";
+import { useRef } from "react";
 import styled from "styled-components";
 import { extras } from "../../data/project";
 import ProjectCards from "./ProjectCards";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const Main = styled.div`
   display: flex;
@@ -12,6 +13,27 @@ const Main = styled.div`
   background: linear-gradient(180deg, #111132, #0c0c1d);
   padding: 2rem; /* Added padding for better spacing */
   scroll-snap-align: center;
+  .parallax {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: white;
+    flex-direction: column;
+
+    .stars {
+      background-image: url("/stars.png");
+      background-size: cover;
+      background-position: bottom;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 0;
+    }
+  }
 `;
 
 const Header = styled.div`
@@ -37,6 +59,14 @@ const CardContainer = styled.div`
 `;
 
 export default function Works() {
+  const ref = useRef();
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
+
+  const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
   return (
     <Main>
       <Header>

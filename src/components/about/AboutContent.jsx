@@ -37,10 +37,15 @@ const Cards = styled.div`
   padding: 20px; /* Increased padding for better readability */
   height: 500px;
   border: 1px solid black;
-  background: linear-gradient(
+  /* background: linear-gradient(
     320deg,
     hsla(259, 100%, 73%, 1) 29%,
     hsla(240, 56%, 28%, 1) 100%
+  ); */
+  background: linear-gradient(
+    320deg,
+    rgba(232, 121, 249, 1) 0%,
+    rgba(30, 58, 138, 1) 100%
   );
 
   color: white;

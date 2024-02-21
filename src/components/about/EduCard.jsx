@@ -14,8 +14,8 @@ const Cards = styled.div`
 
   background: linear-gradient(
     135deg,
-    hsla(259, 100%, 73%, 1) 29%,
-    hsla(240, 56%, 28%, 1) 100%
+    rgba(232, 121, 249, 1) 0%,
+    rgba(30, 58, 138, 1) 100%
   );
 
   color: white;

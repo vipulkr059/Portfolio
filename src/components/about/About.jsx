@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import styled from "styled-components";
 import SideMenu from "./SideMenu";
 import MainContent from "./MainContent";
 import Experience from "./Experience";
 import Education from "./Education";
 import AboutContent from "./AboutContent";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const Main = styled.div`
   height: 100vh;
@@ -14,6 +15,28 @@ const Main = styled.div`
   flex-direction: column;
   background: linear-gradient(180deg, #111132, #0c0c1d);
   color: white;
+
+  .parallax {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: white;
+    flex-direction: column;
+
+    .stars {
+      background-image: url("/stars.png");
+      background-size: cover;
+      background-position: bottom;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 0;
+    }
+  }
 `;
 
 const Header = styled.div`
@@ -46,24 +69,36 @@ const Container2 = styled.div`
 `;
 
 export default function About() {
-  const [item, setitem] = useState("About");
-  const handleItemClick = (item) => {
-    setitem(item);
-  };
+  // const [item, setitem] = useState("About");
+  // const handleItemClick = (item) => {
+  //   setitem(item);
+  // };
+  const ref = useRef();
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
+
+  const yText = useTransform(scrollYProgress, [0, 1], ["0%", "500%"]);
+  const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
   return (
-    <Main>
-      <Header>
-        <span className="heading">
-          ABOUT&nbsp;<span className="text-[#f76301]"> ME</span>
-        </span>
-      </Header>
-      <Container>
-        <AboutContent />
-        <Container2>
-          <Experience />
-          <Education />
-        </Container2>
-      </Container>
+    <Main ref={ref}>
+      <div className="parallax">
+        <motion.div style={{ x: yBg }} className="stars"></motion.div>
+        <Header>
+          <span className="heading">
+            ABOUT&nbsp;<span className="text-[#f76301]"> ME</span>
+          </span>
+        </Header>
+        <Container>
+          <AboutContent />
+          <Container2>
+            <Experience />
+            <Education />
+          </Container2>
+        </Container>
+      </div>
     </Main>
   );
 }
