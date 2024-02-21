@@ -84,13 +84,14 @@ export default function About() {
   const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
   return (
     <Main ref={ref}>
+      <Header>
+        <span className="heading">
+          ABOUT&nbsp;<span className="text-[#f76301]"> ME</span>
+        </span>
+      </Header>
       <div className="parallax">
         <motion.div style={{ x: yBg }} className="stars"></motion.div>
-        <Header>
-          <span className="heading">
-            ABOUT&nbsp;<span className="text-[#f76301]"> ME</span>
-          </span>
-        </Header>
+
         <Container>
           <AboutContent />
           <Container2>

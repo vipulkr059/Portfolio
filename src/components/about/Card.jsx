@@ -29,6 +29,9 @@ const Cards = styled.div`
     transform: translateY(-10px) rotateX(5deg);
     box-shadow: 0 10px 20px rgba(204, 204, 204, 0.3);
   }
+  @media (max-width: 600px) {
+    max-width: 400px;
+  }
 `;
 
 const Heading = styled.div`

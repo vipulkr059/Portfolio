@@ -66,6 +66,10 @@ const Cards = styled.div`
     height: 300px;
     font-size: large;
   }
+  @media (max-width: 600px) {
+    max-width: 400px;
+    font-size: large;
+  }
 `;
 
 const Heading = styled.div`
