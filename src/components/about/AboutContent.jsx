@@ -67,8 +67,8 @@ const Cards = styled.div`
     font-size: large;
   }
   @media (max-width: 600px) {
-    max-width: 400px;
-    font-size: large;
+    max-width: 375px;
+    font-size: medium;
   }
 `;
 

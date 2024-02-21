@@ -21,8 +21,7 @@ const Main = styled.div`
     height: 100%;
     position: relative;
     display: flex;
-    align-items: center;
-    justify-content: center;
+
     overflow: hidden;
     color: white;
     flex-direction: column;
@@ -66,6 +65,9 @@ const Container2 = styled.div`
   flex-wrap: wrap;
   gap: 1rem;
   padding: 10px;
+  @media (max-width: 600px) {
+    gap: 0.5rem;
+  }
 `;
 
 export default function About() {
@@ -84,12 +86,13 @@ export default function About() {
   const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
   return (
     <Main ref={ref}>
-      <Header>
-        <span className="heading">
-          ABOUT&nbsp;<span className="text-[#f76301]"> ME</span>
-        </span>
-      </Header>
       <div className="parallax">
+        <Header>
+          <span className="heading">
+            ABOUT&nbsp;<span className="text-[#f76301]"> ME</span>
+          </span>
+        </Header>
+
         <motion.div style={{ x: yBg }} className="stars"></motion.div>
 
         <Container>
