@@ -15,7 +15,7 @@ export const Menu = styled.div`
     background-color: #f76301;
     color: $mainColor;
     position: fixed;
-    z-index: 4;
+    z-index: 15;
     transition: all 1s ease;
 
     .wrapper {

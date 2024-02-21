@@ -52,9 +52,9 @@ export default function Skills() {
 
     <div
       id="skills"
-      className="flex flex-col h-screen snap-center bg-gradient-to-b from-[#111132] to-[#0c0c1d] lg:flex-row"
+      className="flex flex-col h-screen bg-gradient-to-b from-[#111132] to-[#0c0c1d] lg:flex-row snap-center"
     >
-      <div className="flex flex-1 flex-col bg-[#a276ff] rounded-3xl items-center ">
+      <div className="flex flex-1 flex-col bg-gradient-to-tr from-fuchsia-400 to-blue-900 rounded-3xl items-center">
         <div
           className="text-4xl text-white my-6 sm:text-6xl sm:my-8"
           data-aos="fade-right"
@@ -63,7 +63,7 @@ export default function Skills() {
           Ski<span className="text-[#f76301]">ll</span>s
         </div>
         <div
-          className="text-sm mx-10 text-white sm: text-xl flex justify-center sm:ml-28"
+          className="text-sm mx-4 sm:mx-10 text-white flex justify-center sm:ml-28 text-xl"
           data-aos="fade-right"
           data-aos-duration="1500"
         >
@@ -74,7 +74,8 @@ export default function Skills() {
             <br />
             <br />
             I also have full-stack development experience with MongoDb,
-            expressJs, ReactJs & NodeJS. <br />
+            expressJs, ReactJs & NodeJS.
+            <br />
             <br />
             I Also Have Knowledge of Data Structures And Algorithms And Problem
             Solving Skills with Java.
@@ -86,7 +87,7 @@ export default function Skills() {
           </div>
         </div>
       </div>
-      <div className="flex flex-1 ">
+      <div className="flex flex-1">
         <RightSide />
       </div>
     </div>

@@ -81,7 +81,7 @@ export const Left = styled.div`
 export const Right = styled.div`
   display: flex;
   flex: 1;
-  background-color: #a276ff;
+  /* background-color: #a276ff; */
   border-radius: 25px 25px 0px 0px;
   z-index: 1;
 

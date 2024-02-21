@@ -2,12 +2,13 @@ import React from "react";
 import styled from "styled-components";
 const CardContainer = styled.div`
   perspective: 1000px;
+  display: flex;
+  gap: 1rem;
 `;
 
 const Cards = styled.div`
-  width: 100%; /* Adjusted width to fit the container */
-  max-width: 600px; /* Added max-width to prevent overflowing on smaller screens */
-  height: 280px;
+  width: 290px;
+  height: 200px;
   padding: 10px;
   border: 1px solid black;
 
@@ -29,6 +30,10 @@ const Cards = styled.div`
     transform: translateY(-10px) rotateX(5deg);
     box-shadow: 0 10px 20px rgba(204, 204, 204, 0.3);
   }
+  /* @media (max-width: 768px) {
+    width: calc(
+      50% - 0.5rem
+    ); Display cards in two columns on smaller screens */
 `;
 
 const Heading = styled.div`
@@ -44,31 +49,30 @@ const SubHeading = styled.div`
   margin-bottom: 2px;
 `;
 const Description = styled.div`
-  -webkit-text-stroke-width: 0.5px;
-  -webkit-text-stroke-color: black;
+  font-family: "Montserrat", sans-serif;
 `;
 
-const Card = () => {
+const EduCard = () => {
   return (
     <CardContainer>
       <Cards>
         <Heading>
-          Software <span className="text-[#f76301]">Engineer</span>
+          Bachelor Of <span className="text-[#f76301]">Technology</span>
         </Heading>
-        <SubHeading>Bhavna Corp</SubHeading>
-        <SubHeading>Jul 2022-Present</SubHeading>
-        <Description>
-          <p>
-            Collaborated with the client to automate, digitize, and streamline
-            supply chain operations, resulting in a notable 15% reduction in
-            order processing time. Established a system facilitating smooth data
-            exchange among business partners through a web-based platform,
-            employing standard formats used by over 100+ partners.
-          </p>
-        </Description>
+        <SubHeading>Computer Science & Engineering</SubHeading>
+        <SubHeading>GGSIPU</SubHeading>
+        <SubHeading>2019-2022</SubHeading>
+      </Cards>
+      <Cards>
+        <Heading>
+          Dip<span className="text-[#f76301]">lom</span>a
+        </Heading>
+        <SubHeading>Information And Technolgy</SubHeading>
+        <SubHeading>BTE</SubHeading>
+        <SubHeading>2016-2019</SubHeading>
       </Cards>
     </CardContainer>
   );
 };
 
-export default Card;
+export default EduCard;

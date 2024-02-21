@@ -4,7 +4,7 @@ import { Button } from "../projects/projectStyle";
 
 const Header = ({ projectId }) => {
   return (
-    <div className="flex flex-col-reverse sm:flex-row">
+    <div className="flex flex-col-reverse sm:flex-row h-full">
       <div className="flex flex-1 flex-col text-5xl text-white justify-center items-center sm:text-7xl">
         <div className="">
           <p>{data[projectId].name}</p>
@@ -24,7 +24,12 @@ const Header = ({ projectId }) => {
       </div>
       <div className="flex flex-1 justify-center items-center">
         <div className="m-10">
-          <img src={data[projectId].headerImage} alt="" />
+          <img
+            src={data[projectId].headerImage}
+            alt=""
+            className=" w-full h-full"
+            loading="lazy"
+          />
         </div>
       </div>
     </div>

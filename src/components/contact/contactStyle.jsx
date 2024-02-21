@@ -33,13 +33,18 @@ export const Main = styled.div`
   }
 
   .contact-links {
-    background-color: #a276ff;
+    background: linear-gradient(
+      135deg,
+      rgba(232, 121, 249, 1) 0%,
+      rgba(30, 58, 138, 1) 100%
+    );
+
     display: flex;
     flex: 1;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: radial-gradient(
+    /* background: radial-gradient(
         circle at 55% 92%,
         #426691 0 12%,
         transparent 12.2%
@@ -51,12 +56,12 @@ export const Main = styled.div`
         transparent 7.2%
       ),
       radial-gradient(circle at 0% 0%, #263a53 0 40%, transparent 40.2%),
-      #a276ff;
+      #a276ff; */
     border-radius: 10px 0 0 10px;
   }
 
   .contact-form-wrapper {
-    background-color: #f76301;
+    /* background-color: #f76301; */
 
     border-radius: 0 10px 10px 0;
   }
